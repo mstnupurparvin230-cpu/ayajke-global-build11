@@ -1,52 +1,17 @@
-# Ay Ajke Global Limited — Consolidated Build 09
+# Ay Ajke Global Limited
 
-This release is the consolidated continuation of Builds 03–08.
-Nothing from the previous build direction is intentionally removed.
+Flutter starter for the Main App.
 
-## Main application
-- Global Home based on the supplied reference design
-- Rental / Rent & Property
-- Owner / Tenant flows
-- Property Add, Search and Filter
-- Visit / Booking UI
-- Verification UI
-- Marketplace
-- Product Add, Search, Filter and Details
-- Cart
-- Checkout demo
-- Orders and status UI
-- Buyer/Seller dashboard
-- Account
-- Secure Login / OTP UI
-- Security Center
-- Backend status / API integration layer
+## Current foundation
+- Main Home
+- Services grid
+- Global search UI placeholder
+- Bottom navigation
+- Service module routing
+- Material 3 UI
 
-## Backend starter
-- Express API server skeleton
-- PostgreSQL schema
-- Users and roles
-- Properties and visits
-- Products
-- Orders and order items
-- Verification requests
-- Audit logs
-- API contract
-- Deployment checklist
-- Environment-variable template
+## Planned modules
+Authentication, country/region/district/thana/union/village/road/house location, owner/tenant verification, Rent & Property, Marketplace, Courier, Transport, Agriculture, Livestock, Fashion, Cosmetics, News & Media, Education, Payment, Messaging, Notifications, Admin Panel and security/backend APIs.
 
-## What is NOT live yet
-This package is still a development/release foundation. A real deployment requires:
-- a hosted HTTPS backend
-- a real PostgreSQL database
-- real OTP/SMS provider
-- secure token/session storage and rotation
-- object storage
-- payment gateway
-- notification provider
-- admin authentication and moderation
-- production monitoring/backups
-
-No real credentials or secrets are included.
-
-## Security
-All sensitive operations must be server-authorized. Do not trust client-supplied roles, identity verification, payment status or order totals. Keep sensitive identity documents in private storage with strict access control, encryption and audit logs.
+## Important
+This is a development foundation, not a production-ready security or payment system. Production authentication, database, API authorization, encrypted secrets, identity verification and payment integration must be implemented server-side and security-tested before release.
