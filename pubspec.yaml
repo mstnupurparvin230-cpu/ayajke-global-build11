@@ -1,7 +1,7 @@
-name: ayajke_global_build10
-description: Ay Ajke Global Limited - Build 09 Consolidated Global Home + Marketplace + Account/Security + Backend
+name: ayajke_global_build04
+description: Ay Ajke Global Limited - Build 08 Global Home + Marketplace + Account/Security + Backend integration layer
 publish_to: "none"
-version: 1.0.0+10
+version: 0.8.0+8
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

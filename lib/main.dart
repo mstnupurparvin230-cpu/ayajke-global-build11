@@ -18,19 +18,19 @@ class AyAjkeApp extends StatelessWidget {
         colorSchemeSeed: Colors.indigo,
         scaffoldBackgroundColor: const Color(0xfff6f7fb),
       ),
-      home: const Build10Home(),
+      home: const Build03Home(),
     );
   }
 }
 
-class Build10Home extends StatefulWidget {
-  const Build10Home({super.key});
+class Build03Home extends StatefulWidget {
+  const Build03Home({super.key});
 
   @override
-  State<Build10Home> createState() => _Build10HomeState();
+  State<Build03Home> createState() => _Build03HomeState();
 }
 
-class _Build10HomeState extends State<Build10Home> {
+class _Build03HomeState extends State<Build03Home> {
   int tab = 0;
   String role = 'Tenant';
 
@@ -42,7 +42,6 @@ class _Build10HomeState extends State<Build10Home> {
       role == 'Owner' ? const OwnerDashboard() : const TenantDashboard(),
       const VerificationPage(),
       const MarketplacePage(),
-      const MoreServicesPage(),
     ];
 
     return Scaffold(
@@ -69,7 +68,6 @@ class _Build10HomeState extends State<Build10Home> {
           NavigationDestination(icon: Icon(Icons.dashboard_outlined), label: 'Dashboard'),
           NavigationDestination(icon: Icon(Icons.verified_outlined), label: 'Verify'),
           NavigationDestination(icon: Icon(Icons.storefront_outlined), label: 'Market'),
-          NavigationDestination(icon: Icon(Icons.apps_outlined), label: 'More'),
         ],
       ),
     );
@@ -142,15 +140,6 @@ class HomePage extends StatelessWidget {
             MaterialPageRoute(builder: (_) => const VerificationPage()),
           ),
         ),
-        _ActionCard(
-          icon: Icons.apps,
-          title: 'আরও সেবা / ইত্যাদি',
-          subtitle: 'ভবিষ্যতে নতুন সেবা একই অ্যাপের মধ্যে যোগ করা যাবে',
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => const MoreServicesPage()),
-          ),
-        ),
         const SizedBox(height: 12),
         const _SecurityNote(),
       ],
@@ -198,62 +187,6 @@ class _SecurityNote extends StatelessWidget {
           ),
         ),
       );
-}
-
-class MoreServicesPage extends StatelessWidget {
-  const MoreServicesPage({super.key});
-
-  static const services = <Map<String, dynamic>>[
-    {'icon': Icons.local_shipping_outlined, 'title': 'Delivery & Courier', 'subtitle': 'পার্সেল ও ডেলিভারি সেবা'},
-    {'icon': Icons.build_outlined, 'title': 'Home Services', 'subtitle': 'মেরামত, পরিষ্কার ও পেশাদার সেবা'},
-    {'icon': Icons.work_outline, 'title': 'Jobs & Careers', 'subtitle': 'চাকরি ও কর্মসংস্থানের সুযোগ'},
-    {'icon': Icons.account_balance_wallet_outlined, 'title': 'Payment / Financial', 'subtitle': 'ভবিষ্যৎ আর্থিক সেবার জায়গা'},
-    {'icon': Icons.school_outlined, 'title': 'Education', 'subtitle': 'কোর্স, শিক্ষা ও শেখার সেবা'},
-    {'icon': Icons.newspaper_outlined, 'title': 'News & Media', 'subtitle': 'খবর ও তথ্য এক জায়গায়'},
-    {'icon': Icons.directions_car_outlined, 'title': 'Transport', 'subtitle': 'যাতায়াত ও পরিবহন সেবা'},
-    {'icon': Icons.more_horiz, 'title': 'Coming Soon', 'subtitle': 'নতুন সেবা পরে যোগ করা যাবে'},
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('আরও সেবা / ইত্যাদি')),
-      body: GridView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: services.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 12,
-          mainAxisSpacing: 12,
-          childAspectRatio: .92,
-        ),
-        itemBuilder: (context, index) {
-          final item = services[index];
-          return Card(
-            child: InkWell(
-              borderRadius: BorderRadius.circular(12),
-              onTap: () => ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('${item['title']} — এই মডিউলটি ভবিষ্যৎ আপডেটের জন্য রাখা হয়েছে।')),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(14),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CircleAvatar(radius: 28, child: Icon(item['icon'] as IconData, size: 28)),
-                    const SizedBox(height: 12),
-                    Text(item['title'] as String, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 6),
-                    Text(item['subtitle'] as String, textAlign: TextAlign.center, style: const TextStyle(fontSize: 12)),
-                  ],
-                ),
-              ),
-            ),
-          );
-        },
-      ),
-    );
-  }
 }
 
 class AddPropertyPage extends StatefulWidget {
