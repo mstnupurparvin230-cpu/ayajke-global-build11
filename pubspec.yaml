@@ -1,14 +1,11 @@
 name: ayajke_global
-description: Ay Ajke Global Limited main app foundation
+description: Ay Ajke Global Limited - build 02
 publish_to: "none"
-version: 0.1.0+1
-
+version: 0.2.0+2
 environment:
   sdk: ">=3.3.0 <4.0.0"
-
 dependencies:
   flutter:
     sdk: flutter
-
 flutter:
   uses-material-design: true

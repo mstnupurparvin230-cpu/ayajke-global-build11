@@ -1,17 +1,11 @@
-# Ay Ajke Global Limited
+# Ay Ajke Global — Build 02
 
-Flutter starter for the Main App.
+Includes a Flutter UI foundation for:
+- Login screen
+- Registration screen
+- Account type selection
+- Country/region/district/thana/union/village location flow
+- Road and house fields
+- Main Home and service grid
 
-## Current foundation
-- Main Home
-- Services grid
-- Global search UI placeholder
-- Bottom navigation
-- Service module routing
-- Material 3 UI
-
-## Planned modules
-Authentication, country/region/district/thana/union/village/road/house location, owner/tenant verification, Rent & Property, Marketplace, Courier, Transport, Agriculture, Livestock, Fashion, Cosmetics, News & Media, Education, Payment, Messaging, Notifications, Admin Panel and security/backend APIs.
-
-## Important
-This is a development foundation, not a production-ready security or payment system. Production authentication, database, API authorization, encrypted secrets, identity verification and payment integration must be implemented server-side and security-tested before release.
+Note: location lists in this demo are placeholders. Production use requires a complete authoritative geographic dataset and a secure backend. Authentication, OTP, identity verification, database/API security and payments are not production-ready yet.
