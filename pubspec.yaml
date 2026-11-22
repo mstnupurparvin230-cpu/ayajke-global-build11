@@ -1,11 +1,18 @@
-name: ayajke_global
-description: Ay Ajke Global Limited - build 02
+name: ayajke_global_build10
+description: Ay Ajke Global Limited - Build 09 Consolidated Global Home + Marketplace + Account/Security + Backend
 publish_to: "none"
-version: 0.2.0+2
+version: 1.0.0+10
+
 environment:
-  sdk: ">=3.3.0 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
+
 dependencies:
   flutter:
     sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
 flutter:
   uses-material-design: true
